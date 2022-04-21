@@ -1,0 +1,62 @@
+﻿@using BiciSendas.Recursos
+@model BiciSendas.Areas.Monitorizacion.Models.Incidencias.IncidenciaIndexVM
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}@
+
+@{
+    ViewData["Title"] = "Incidencias";
+
+    <div id="Filtros" class="col-lg-12 col-md-4 col-xs-2">
+    <!-- Todo dropdow numRegistros -->
+        <div class="col-lg-4">
+            @Html.DropDownListFor(m => m.NumPagina, Model.Paginas, new {htmlAttributtes = new {@class="form-control"}})
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group row">
+                @Html.LabelFor(m => m.Fecha, null, new { @class="col-form-label"})
+                <div>
+                    @Html.EditorFor(m => m.Fecha, new {htmlAttributes = new{ @class="form-control"}})
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group row">
+                @Html.LabelFor(m => m.Estado, null, new {@class="col-form-label"})
+                <div>
+                    @Html.DropDownListFor(m => m.Estado, Model.Estados, new {htmlAttributtes = new {@class="form-control"}})
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group row">
+                @Html.LabelFor(m => m.Barrio, null, new {@class="col-form-label"})
+                <div>
+                    @Html.EditorFor(m => m.Barrio, new {htmlAttributes = new {@class="form-control"}})
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ListaIncidencias" class="col-xs-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">@IncidenciaStrings.Identificador</th>
+          <th scope="col">@IncidenciaStrings.Nombre</th>
+          <th scope="col">@IncidenciaStrings.Usuario</th>
+          <th scope="col">@IncidenciaStrings.Barrio</th>
+          <th scope="col">@IncidenciaStrings.Coordenadas</th>
+          <th scope="col">@IncidenciaStrings.FechaIncidencia</th>
+          <th scope="col">@IncidenciaStrings.Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         
+        </tr
+      </tbody>
+    </table>
+    </div>
+}

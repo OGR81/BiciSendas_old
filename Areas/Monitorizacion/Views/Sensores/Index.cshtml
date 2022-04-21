@@ -1,0 +1,33 @@
+﻿@using BiciSendas.Recursos
+@model BiciSendas.Areas.Monitorizacion.Models.Sensores.SensorIndexVM
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}@
+
+@{
+    ViewData["Title"] = "Sensores";
+    
+
+    <div id="ListaSensores" class="col-xs-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">@SensorStrings.Identificador</th>
+          <th scope="col">@SensorStrings.Nombre</th>
+          <th scope="col">@SensorStrings.Estado</th>
+          <th scope="col">@SensorStrings.Categoria</th>
+          <th scope="col">@SensorStrings.Coordenadas</th>
+          <th scope="col">@SensorStrings.FechaModificacion</th>
+          <th scope="col">@SensorStrings.Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+         
+        </tr
+      </tbody>
+    </table>
+    </div>
+}
